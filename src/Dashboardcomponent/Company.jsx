@@ -4,9 +4,6 @@ import { Card, CardDeck, Button, Col, Container} from 'react-bootstrap';
 import { Icon, Progress, Row, Table, Tag, Timeline } from 'antd';
 import { Chart } from 'primereact/chart';
 import './Style.css'
-import Defectbypro from '../image/defectbyproject.png'
-import Highmediumlow from '../image/highmediumlow.png'
-import Ongoingproupdate from '../image/ongoingproupdate.png'
 import QALeadIcon from '../image/qalead.png';
 import QAIcon from '../image/qa.png';
 
@@ -154,22 +151,13 @@ export default class Company extends Component {
                     </CardDeck>
                     <br></br>
                     <CardDeck>                         
-                        <Card>                        
+                        <Card className="productivitymeter">                        
                             <Card.Body>                     
                             <h6 className="companyh6">Productivity Meter</h6>
                             <Chart type="bar" data={lineChartData} />
                             </Card.Body>                       
                         </Card> 
-                        <Card>                        
-                            <Card.Body>                     
-                            <h6 className="companyh6">Our Clients</h6>
-                             <hr/>      
-                            <Table columns={columns} dataSource={tabledata} />       
-                            </Card.Body>                       
-                        </Card>
-                    </CardDeck> 
-                    <br></br>                                         
-                    <CardDeck>                                          
+                      
                         <Card>
                         <Card.Body>                     
                         <h6 className="companyh6">Timeline</h6>
@@ -201,7 +189,19 @@ export default class Company extends Component {
                                 {/* timeline area ends here */}
                         </Card.Body>                       
                     </Card>
-                    </CardDeck>        
+                    </CardDeck> 
+                    <br></br>
+                    <div >
+                    <CardDeck > 
+                    <Card>                        
+                        <Card.Body >                     
+                        <h6 className="companyh6">Our Clients</h6>
+                         {/* <hr/>       */}
+                        <Table columns={columns} dataSource={tabledata} className="clienttbl"/>       
+                        </Card.Body>                       
+                    </Card>
+                     </CardDeck>
+                  </div>       
                  </div>
                 
                 </div>           
