@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import 'antd/dist/antd.css';
 import { Card, CardDeck, Table, Button } from 'react-bootstrap';
-import { Icon } from 'antd';
+import { Icon, Progress } from 'antd';
 import './Style.css'
 import Defectbypro from '../image/defectbyproject.png'
-import Defectstatus from '../image/defectstatus.png'
+// import Defectstatus from '../image/defectstatus.png'
 import Highmediumlow from '../image/highmediumlow.png'
 import Ongoingproupdate from '../image/ongoingproupdate.png'
 
@@ -47,25 +48,25 @@ export default class ProjectManager extends Component {
                     <Card style={{fontSize: 22, color:"#087878"}}>                        
                         <Card.Body>                     
                         <h6>Defect to Remarks Ratio</h6>
-                        <Icon type="safety-certificate" spin style={{fontSize: 32, color:"#087878"}} /> <p>0.00 %</p> 
+                        <Icon type="safety-certificate" style={{fontSize: 32, color:"#087878"}} /> <p>0.00 %</p> 
                         </Card.Body>                       
                     </Card>
                     <Card style={{fontSize: 22, color:"green"}}>                        
                         <Card.Body>                     
                         <h6>Defect Density</h6>
-                        <Icon type="fund" spin style={{fontSize: 32, color:"green"}} /> <p>0.00%</p> 
+                        <Icon type="fund" style={{fontSize: 32, color:"green"}} /> <p>0.00%</p> 
                         </Card.Body>                       
                     </Card>
                     <Card style={{fontSize: 22, color:"green"}}>                        
                         <Card.Body>                     
                         <h6>Total Defect</h6>
-                        <Icon type="safety-certificate" spin style={{fontSize: 32, color:"green"}} /> <p>0</p> 
+                        <Icon type="safety-certificate" style={{fontSize: 32, color:"green"}} /> <p>0</p> 
                         </Card.Body>                       
                     </Card>
                     <Card style={{fontSize: 22, color:"#087878"}}>                        
                         <Card.Body>                     
                         <h6>Total Open High</h6>
-                        <Icon type="safety-certificate" spin style={{fontSize: 32, color:"red"}} /> <p>0</p> 
+                        <Icon type="safety-certificate" style={{fontSize: 32, color:"red"}} /> <p>0</p> 
                         </Card.Body>                       
                     </Card>
                     </CardDeck>
@@ -81,8 +82,18 @@ export default class ProjectManager extends Component {
                     <Card>                        
                         <Card.Body>                     
                         <h6>Defects Status</h6>
-                        <hr/>             
-                        <img src={Defectstatus} height="80%" width="90%" alt=""></img>                       
+                        <hr/>
+                        <div >
+                            <h6>New</h6><div className="Progress"><Progress percent={20} /></div>
+                            <h6>Opened</h6><div className="Progress"><Progress percent={30} status="active" /></div>
+                            <h6>Fixed</h6><div className="Progress"><Progress percent={40} status="exception" /></div>
+                            <h6>Reopen</h6><div className="Progress"><Progress percent={50} /></div>
+                            <h6>Closed</h6><div className="Progress"> <Progress percent={60} status="exception" /></div>
+                            <h6>Rejected</h6><div className="Progress"> <Progress percent={70} /></div>
+                            <h6>Deferred</h6><div className="Progress"> <Progress percent={80} showInfo={false} /></div>
+
+                        </div>             
+                        {/* <img src={Defectstatus} height="80%" width="90%" alt=""></img>                        */}
                         </Card.Body>                       
                     </Card>
                     </CardDeck>
