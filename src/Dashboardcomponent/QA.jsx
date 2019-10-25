@@ -61,10 +61,9 @@ export default class QA extends Component {
                
                 </CardDeck>
                 <h6>&emsp;Total Defect & Closed Defect</h6>
-                <h6 className="totalactivedefects">&emsp;Total Active Defects</h6>
-                    <br></br>
+                <h6 className="totalactivedefects">&emsp;&emsp;Total Active Defects</h6>
                     <CardDeck>
-                    <Card style={{fontSize: 34 }}>                        
+                    <Card style={{fontSize: 34 }} className="total_active_defect">                        
                         <Card.Body>                     
                         <div>
                             <Progress type="circle" percent={75} />
@@ -80,7 +79,7 @@ export default class QA extends Component {
                         {/* <Icon type="arrow-down" style={{fontSize: 32, color:"red"}} /> <p>11.1%</p>  */}
                         </Card.Body> 
                         <Card.Body className="idle">  
-                        <h6 className="h6idle">Active</h6>                  
+                        <h6 className="h6idle">Idle</h6>                  
                         <Icon type="arrow-down" style={{fontSize: 32, color:"red"}} /> <p>9.30%</p> 
                         {/* <Icon type="arrow-down" style={{fontSize: 32, color:"red"}} /> <p>11.1%</p>  */}
                         </Card.Body>                      

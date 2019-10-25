@@ -14,19 +14,20 @@ h4{
 }
 .h4style
 {
-    color: rgb(148, 122, 122);
+    color: rgb(97, 45, 45);
     font-size: 20px;
 }
 .h4styleval
 {
-    color: rgb(148, 122, 122);
+    color: rgb(165, 139, 157);
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+ }
 .totalNewClosed
 {
-    height: 20%;
+    height: 21%;
     width: 90%;
+    padding: 3%;
 }
 .defstatuschart
 {
@@ -61,11 +62,13 @@ h6{
 {
     margin-left: 40%;
     margin-top: -20%;
+    padding: 2%;
 }
 .active
 {
     margin-left: -30%;
     margin-top: 10%;
+    padding: 2%;
 }
 .h6active
 {
@@ -80,5 +83,11 @@ h6{
     color: rgb(119, 108, 108);
     text-align: left;
     margin-left: 45%;
-    margin-top: -9%;
+    margin-top: -20%;
+    
+    
+}
+.total_active_defect
+{
+    padding: 3%;
 }
