@@ -1,0 +1,26 @@
+.pmdashboard
+{
+    padding: 2%;
+    background-color: rgb(233, 239, 241);
+}
+h5{
+    text-align: left;
+    font-size: 10px;
+   
+}
+h6{
+    font-size: 100px;
+    color: rgb(119, 108, 108);
+    text-align: left;
+}
+.btn_clear_fiter
+{
+    text-align: left;
+}
+.tbl
+{
+    background-color: white;
+    padding: 2%;
+    margin-top: 2%;
+
+}
