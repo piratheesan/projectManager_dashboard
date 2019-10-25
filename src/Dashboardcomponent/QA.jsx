@@ -18,10 +18,10 @@ export default class QA extends Component {
                 <CardDeck> 
                 <Container fluid={true}>
                     <Row>
-                        <Col sm={9}>
+                        <Col sm={8}>
                         <Card style={{fontSize: 22, color:"black"}} className="defstatuschart">                        
                         <Card.Body>                     
-                        <div >
+                        <div className="QAstatus">
                             <h6>Library System</h6><div className="Progress"><Progress percent={90} /></div>
                             <h6>Defect System</h6><div className="Progress"><Progress percent={70} status="active" /></div>
                             <h6>HRM System</h6><div className="Progress"><Progress percent={100} /></div>
@@ -31,7 +31,7 @@ export default class QA extends Component {
                         </Card.Body>                       
                     </Card>   
                         </Col>
-                        <Col sm={3}>   
+                        <Col sm={4}>   
                         <div className="defect">                    
                         <Card style={{fontSize: 22, color:"black"}} >                        
                             <Card.Body > 

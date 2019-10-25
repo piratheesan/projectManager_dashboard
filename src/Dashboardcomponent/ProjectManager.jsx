@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import 'antd/dist/antd.css';
 import { Card, CardDeck, Table, Button } from 'react-bootstrap';
-import { Icon, Progress } from 'antd';
+import { Icon, Progress, Timeline } from 'antd';
 import './Style.css'
 import Defectbypro from '../image/defectbyproject.png'
 // import Defectstatus from '../image/defectstatus.png'
@@ -93,7 +93,7 @@ export default class ProjectManager extends Component {
                             <h6>Deferred</h6><div className="Progress"> <Progress percent={80} showInfo={false} /></div>
 
                         </div>             
-                        {/* <img src={Defectstatus} height="80%" width="90%" alt=""></img>                        */}
+                        
                         </Card.Body>                       
                     </Card>
                     </CardDeck>
@@ -108,7 +108,23 @@ export default class ProjectManager extends Component {
                         <Card.Body>                     
                         <h6>Ongoing Project Updates</h6>
                         <hr/>             
-                        <img src={Ongoingproupdate} height="80%" width="90%" alt=""></img>                       
+                        {/* timeline area starts here */}
+                        <div className="content-section implementation">
+                                    <Timeline mode="alternate">
+                                        <Timeline.Item>Create a services site 2019-09-01</Timeline.Item>
+                                        <Timeline.Item color="green">Solve initial network problems 2019-09-01</Timeline.Item>                                 
+                                        <Timeline.Item color="red">Network problems being solved 2019-09-01</Timeline.Item>
+                                        <Timeline.Item>Create a services site 2019-09-01</Timeline.Item>
+                                        <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>
+                                            Technical testing 2019-09-01
+                                    </Timeline.Item>
+                                    <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>
+                                            Manual testing 2019-09-01
+                                    </Timeline.Item>                                        
+                                    <Timeline.Item color="red">Network problems being solved 2019-09-01</Timeline.Item>
+                                    </Timeline>
+                                </div>
+                                {/* timeline area ends here */}                      
                         </Card.Body>                       
                     </Card>
                     </CardDeck>                   
